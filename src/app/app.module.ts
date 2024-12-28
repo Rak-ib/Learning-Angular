@@ -9,25 +9,30 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { AboutComponent } from './component/about/about.component';
+// import { HomeComponent } from './home/home.component';
+// import { AboutComponent } from './component/about/about.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { HeaderComponent } from './header/header.component';
 import { TopHeaderComponent } from './top-header/top-header.component';
-import { ProductListComponent } from './product-list/product-list.component';
+import { ContainerComponent } from './container/container.component';
+import { SearchComponent } from './container/search/search.component';
+import { FormsModule } from '@angular/forms';
+import { ProductListComponent } from './container/product-list/product-list.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    AboutComponent,
     HeaderComponent,
     TopHeaderComponent,
+    ContainerComponent,
+    SearchComponent,
     ProductListComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule
     // MatToolbarModule,
     // MatSidenavModule,
     // MatButtonModule,

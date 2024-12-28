@@ -6,5 +6,7 @@ import { Component } from "@angular/core";
 
 })
 export class HeaderComponent{
+    pages:string[]=["Home", "About", "Product", "Contact"];
+    
 
 }

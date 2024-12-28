@@ -1,0 +1,23 @@
+<div class="grid grid-cols-3 gap-3">
+    <div class="py-3  border-2 border-green-700 rounded-lg" *ngFor="let product of products">
+        <div class="flex flex-col">
+            <div>
+                <img [src]="product.imageURL" class="rounded p-2 " alt="">
+            </div>
+            <div class="flex flex-col items-center justify-center">
+                <div class="flex flex-col">
+                    <p>Name:{{product.name}}</p>
+                    <p>Price:${{product.price}}</p>
+                    <p>Color: {{product.color}} </p>
+                    <p>Brand:{{product.brand}} </p>
+                    <p>Gender:{{product.gender}} </p>
+                    <p>Category:{{product.category}} </p>
+                    <p>Color:{{product.color}} </p>
+                </div>
+                <button class="border-2 p-2" *ngIf="product.is_in_inventory">Buy Now</button>
+        
+            </div>
+        </div>
+    
+    </div>
+</div>
