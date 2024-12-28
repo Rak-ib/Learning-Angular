@@ -1,0 +1,23 @@
+<div class="flex items-center justify-center mb-10">
+    <div class="flex space-x-4">
+        <!-- Select All Radio Button -->
+        <label class="flex items-center space-x-2 cursor-pointer">
+            <input type="radio" name="brand" value="all" [(ngModel)]="selectedField"  (change)="setEventForFilter($event)"  class="hidden peer">
+            <span class="px-4 py-2 text-sm font-medium text-gray-700 border rounded-lg border-gray-300 bg-white peer-checked:bg-green-500 peer-checked:text-white hover:bg-gray-100">Select All {{'('+all+')'}} </span>
+        </label>
+
+        <!-- Bata Radio Button -->
+        <label class="flex items-center space-x-2 cursor-pointer">
+            <input type="radio" name="brand" value="true" [(ngModel)]="selectedField" (change)="setEventForFilter($event)" class="hidden peer">
+            <span class="px-4 py-2 text-sm font-medium text-gray-700 border rounded-lg border-gray-300 bg-white peer-checked:bg-green-700 peer-checked:text-white hover:bg-gray-100">In Stock{{'('+inStock+')'}}</span>
+        </label>
+
+        <!-- Lotto Radio Button -->
+        <label class="flex items-center space-x-2 cursor-pointer">
+            <input type="radio" name="brand" value="false" [(ngModel)]="selectedField" (change)="setEventForFilter($event)" class="hidden peer">
+            <span class="px-4 py-2 text-sm font-medium text-gray-700 border rounded-lg border-gray-300 bg-white peer-checked:bg-green-700 peer-checked:text-white hover:bg-gray-100">Out of Stock{{'('+outOfStock+')'}}</span>
+        </label>
+
+        
+    </div>
+</div>
