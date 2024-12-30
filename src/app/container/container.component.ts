@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class ContainerComponent {
   order:number=0;
+  productName:string="";
   product={
     name: "iPhone 15",
     price: 999,
@@ -27,6 +28,11 @@ export class ContainerComponent {
 
   discountedPrice() {
     return this.product.price*(100-this.product.discount)/100;
+  }
+
+  getSearchedText(event:string){
+    this.productName=event
+    console.log(event,"output Decoretor")
   }
 
 

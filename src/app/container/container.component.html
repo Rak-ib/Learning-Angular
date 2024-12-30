@@ -1,7 +1,7 @@
 <div class="mt-10">
-    <search></search>
+    <search (searchText)="getSearchedText($event)"></search>
     <div class="grid-cols-3">
-        <app-product-list></app-product-list>
+        <app-product-list [productName]="productName"></app-product-list>
     </div>
     
 <!--  -->

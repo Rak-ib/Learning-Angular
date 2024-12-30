@@ -1,6 +1,7 @@
 <app-filter [all]="AllProduct" [inStock]="ProductInStock" [outOfStock]="ProductOutOfStock"  (fieldChanged)="getFilteredField($event)"></app-filter>
 <div class="grid grid-cols-3 gap-3" >
     <div  *ngFor="let product of products">
-        <app-product  [item]="product" *ngIf=" childFilterField==='all' || product.is_in_inventory.toString() === childFilterField "></app-product>
+        <!-- *ngIf=" childFilterField==='all' || product.is_in_inventory.toString() === childFilterField " -->
+        <app-product  [item]="product" *ngIf="productName===''|| product.name.includes(productName)" ></app-product>
     </div>
 </div>
