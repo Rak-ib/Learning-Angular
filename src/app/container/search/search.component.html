@@ -1,7 +1,7 @@
 <div class=" px-[11vw]">
     <div>
-        <input type="text" name="" id="" class="w-[50vw] h-[12vh] border-2 border-green-700 rounded-lg px-6 text-green-700" [(ngModel)]="inputText"  >
-        <button class="bg-green-700 w-[10vw] h-[12vh] text-white rounded-lg " [disabled]="!inputText" (click)="eventEmitter()"  [ngClass]="{'disabled:bg-gray-400 disabled:cursor-not-allowed': !inputText}">search</button>
+        <input type="text" name="" id="" class="w-[50vw] h-[12vh] border-2 border-green-700 rounded-lg px-6 text-green-700"  #searchInput >
+        <button class="bg-green-700 w-[10vw] h-[12vh] text-white rounded-lg " (click)="eventEmitter()"  [ngClass]="{'disabled:bg-gray-400 disabled:cursor-not-allowed': !inputText}">search</button>
     </div>
     <div class="min-h-[10vh]">
         <p class="" *ngIf="inputText">Search result for:<strong>{{inputText}} </strong> </p>
